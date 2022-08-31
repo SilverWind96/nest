@@ -11,6 +11,9 @@ export class UsersService {
     return this.repo.save(_user);
   }
   findOne(id: number) {
+    if (!id) {
+      return null;
+    }
     return this.repo.findOneBy({ id });
     // return this.repo.findOne({ where: { id: id } });
   }

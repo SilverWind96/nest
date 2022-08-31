@@ -6,9 +6,14 @@ import { ReportsModule } from './reports/reports.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { User } from './users/user.entity';
 import { Report } from './reports/report.entity';
+// import { ConfigModule } from '@nestjs/config';
 
 @Module({
   imports: [
+    // ConfigModule.forRoot({
+    //   isGlobal: true,
+    //   envFilePath: `.env.${process.env.NODE_ENV}`,
+    // }),
     UsersModule,
     ReportsModule,
     TypeOrmModule.forRoot({
